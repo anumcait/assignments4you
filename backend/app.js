@@ -6,6 +6,7 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const Razorpay = require('razorpay');
 
+
 // Initialize Razorpay instance
 const razorpay = new Razorpay({
     key_id: 'rzp_test_KBJq9jgg10W0QL',  // Replace with your Razorpay key_id
@@ -15,8 +16,9 @@ const razorpay = new Razorpay({
 const app = express();
 
 require('dotenv').config();
+const MONGO_URI = process.env.MONGO_URI;
 
-mongoose.connect('mongodb://localhost:27017/assignmentdb',{
+mongoose.connect(MONGO_URI,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(()=>{
