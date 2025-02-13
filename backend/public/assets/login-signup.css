@@ -1,0 +1,56 @@
+#login-signup-section {
+    background: #3f71af98;
+    padding: 50px 0px;
+    color: #5e503f;
+  }
+  
+  #login-signup-section .login-signup .login-form-wrap {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+  
+  #login-signup-section .login-signup .signup-form-wrap {
+    background-color: #f0ead6d6;
+    padding: 20px;
+    border-left: 2px solid;
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.1), 10px 0 50px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media query for screen sizes smaller than 768px (e.g., mobile devices) */
+  @media (max-width: 767.98px) {
+    #login-signup-section .login-signup .signup-form-wrap {
+      border-left: none; /* Remove border-left */
+      box-shadow: none; /* Remove box-shadow */
+    }
+  }
+  
+  #login-signup-section .login-signup .form-group {
+    margin-top: 20px;
+  }
+  
+  #login-signup-section .login-signup .form-group input {
+    /* background-color: #5e503f6a; */
+    border: 1px solid black;
+  }
+  
+  .form-control:focus {
+    box-shadow: none; /* Remove the default box-shadow when focused */
+  }
+  
+  #login-signup-section .login-signup .form-group .form-control {
+    border-color: #ced4da; /* Set the default border color */
+    transition: border 0.3s ease; /* Add a transition effect */
+  }
+  
+  #login-signup-section .login-signup .form-group input:focus {
+    border: 2px solid #5e503f;
+  }
+  
+  .fade-out {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+  .fade-out.hidden {
+    opacity: 0;
+  }
+  

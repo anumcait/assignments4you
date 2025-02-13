@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Linkers</title>
+    <meta
+      name="keywords"
+      content="Assignment Help, Academic Writing, Homework Help, Research Paper Writing Help, Case Study Help, Coursework Help, Thesis Help, Narrative Writing, Dissertation Help, Statistical Analysis, Proposal Writing Service, Manuscript Writing Service, Editing and Proofreading Service, Essay Writing Service, Practical Assignments Help, Capstone Projects, CDR Reports, Write My Paper, Lab Report, Video Solutions, Speech Writing, Project Report Writing, Take My Online Exam, PowerPoint Presentation Service, professional writing services, academic assistance, custom writing services"
+    />
+    <meta
+      name="description"
+      content="Professional writing services company offering a wide range of academic and professional writing assistance. Our services include Assignment Help, Academic Writing, Homework Help, Research Paper Writing, Case Study Help, Coursework Help, Thesis and Dissertation Help, Statistical Analysis, Proposal Writing, Manuscript Writing, Editing and Proofreading, Essay Writing, Practical Assignments, Capstone Projects, CDR Reports, Lab Reports, Video Solutions, Speech Writing, Project Report Writing, Online Exam Assistance, and PowerPoint Presentation Services. Achieve your academic and professional goals with expert support and high-quality writing solutions."
+    />
+
+    <!-- Favicons -->
+    <link href="/assets/img/favicon/favicon-16x16.png" rel="icon" />
+    <link href="/assets/img/favicon/favicon-32x32.png" rel="icon" />
+    <link href="/assets/img/favicon/apple-touch-icon.png" rel="icon" />
+    <link href="/assets/img/favicon/android-chrome-192x192.png" rel="icon" />
+    <link href="/assets/img/favicon/android-chrome-512x512.png" rel="icon" />
+
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Template Main CSS File -->
+
+
+    <link rel="stylesheet" href="/assets/style.css"> <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/index.css"> <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/login-signup.css"> <!-- Custom CSS -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center header-transparent">
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-xl-11 d-flex align-items-center justify-content-between">
+        <!--  image logo -->
+        <a href="index.html" class="logo"><img src="/assets/img/assignment-linkers-logo.png" alt="assignment-linkers-logo" class="img-fluid" width="100px" height="190px" /></a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto" href="/">Home</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/about">About Us</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/services">Services</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/subjects">Subjects</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/contactus">Contact Us</a>
+            </li>
+            <li><a class="nav-link scrollto" href="/offers">Offers</a></li>
+            <li><a class="nav-link" href="/reviews">Reviews</a></li>
+            <li><a class="nav-link" href="/faq">FAQ</a></li>
+
+            <li><a class="nav-link" href="/auth/login"> login/signup </a></li>
+            <li class="dropdown">
+              <a href="#"><span>Others</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="/refundpolicy">Refund Policies</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/career">Career</a></li>
+                <li><a href="/samples">Samples</a></li>
+                <li><a href="/membership">Membership</a></li>
+              </ul>
+            </li>
+            <li>
+              <!-- <a class="nav-link scrollto Order" href="#">Order now</a> -->
+              <form action="/userdashboard/orderassignment" method="GET">
+                <button type="submit" class="btn btn-success">Order now</button>
+              </form>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle" style="color: #2655a5; background-color: rgba(255, 255, 255, 0.742)"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End Header -->
+
+    <!-- End Header -->
+
+    <main id="main">
+      <section id="login-signup-section">
+        <div class="container login-signup">
+          <!-- Display flash messages if any -->
+            
+
+          <div class="row">
+            <div class="col-sm-6 login-form-wrap" style="border-radius: 10px 0px 0px 10px;">
+              <!-- login-signup.ejs -->
+
+              <form action="/login" method="POST">
+                <h2 class="text-center text-muted">Login</h2>
+
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" class="form-control" name="password" required />
+                </div>
+                <div class="form-group text-center">
+                  <button class="btn btn-success" type="submit">Login</button>
+                </div>
+              </form>
+              <div class="text-center mt-3 text-warning">
+                <a href="/auth/forgotpassword" id="forgotpassword">Forgot Password</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 signup-form-wrap" style="border-radius: 0px 10px 10px 0px;">
+              <form action="/signup" method="POST">
+                <h2 class="text-center">Register</h2>
+
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="username" name="username" required />
+                </div>
+                <div class="form-group">
+                  <label for="mobile">Mobile Number:</label>
+                  <input type="tel" class="form-control" id="mobile" name="mobile" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password" name="password" required />
+                </div>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn btn-success">Sign Up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <% if (message) { %>
+          <p style="color: red;"><%= message %></p>
+      <% } %>
+      </section>
+    </main>
+    <section>
+  <div class="whatsapp&callbutton">
+    <a href="https://wa.me/+61494311801" target="_blank" class="whatsapp-button">
+      <img src="/assets/img/socialmedialogos/Digital_Stacked_Green.png" alt="WhatsApp" width="50px" />
+    </a>
+  </div>
+</section>
+
+    <!-- ======= Header ======= -->
+    <section id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 footer-links">
+          <header class="section-header">
+            <h4>Our Policies</h4>
+          </header>
+          <div class="our-policies">
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/privacypolicy">Privacy Policy</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/terms&conditions">Terms & Conditions</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/payment&securedpolicy">Payment & Secured Policy</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/refundpolicy">Refund Policy</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/copyrightpolicy">Copyright Policy</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/fairusepolicy">Fair use Policy</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/satisfactionpolicy">Satisfaction Policy</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="/valueformoney">Value for Money</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 footer-contact">
+          <header class="section-header">
+            <h4>Contact Us</h4>
+          </header>
+          <div class="social-links">
+            <a href="https://wa.me/+61494311801" class="whatsapp"
+              ><img
+                src="/assets/img/socialmedialogos/Digital_Stacked_Green.png"
+                alt="whatsapp"
+                width="30px"
+            /></a>
+            <a href="https://www.instagram.com/assignmentlinkers/" class="instagram">
+              <img
+                src="/assets/img/socialmedialogos/Instagram_Glyph_Gradient.png"
+                alt="instagram logo"
+                width="30px"
+            /></a>
+            <a href="https://www.facebook.com/profile.php?id=61556511496784" class="facebook"
+              ><img
+                src="/assets/img/socialmedialogos/Facebook_Logo_Primary.png"
+                alt="facebook logo"
+                width="30px"
+            /></a>
+            <a href="https://www.linkedin.com/in/assignmentlinkers/" class="linkedin"
+              ><img
+                src="/assets/img/socialmedialogos/LI-In-Bug.png"
+                alt="linkdin"
+                width="30px"
+            /></a>
+            <a href="https://x.com/AssignmentsLink" class="twitter"
+              ><img
+                src="/assets/img/socialmedialogos/logo-black.png"
+                alt="twitter logo"
+                width="30px"
+            /></a>
+            <a href="https://in.pinterest.com/assignmentlinkers/" class="pinterest"
+                  ><img
+                    src="/assets/img/socialmedialogos/pinterest-logo.png"
+                    alt="youtube logo"
+                    width="30px"
+                /></a>
+
+            <a href="https://youtube.com/@assignmentlinkers?si=IvE9VbV4XTnGXs6A" class="youtube"
+              ><img
+                src="/assets/img/socialmedialogos/yt_logo_rgb_light.png"
+                alt="youtube logo"
+                width="30px"
+            /></a>
+          </div>
+          <div class="row contact-info">
+            <div class="col-6">
+              <div class="contact-address">
+                <h6>Address:</h6>
+                <address style="font-style: italic">
+                  MIG 797, <br />sitamahalakshmi apartments, <br />Ground
+                  floor back side, <br />
+                  near bhuvana vijayam grounds,<br />
+                  KPHB phase 2 , pincode 500072.
+                </address>
+              </div>
+              <div class="contact-phone">
+                <h6>Phone Number:</h6>
+                <p><i class="bi bi-telephone" style="color: white; margin-right: 5px;"></i><a href="tel:+918309368958">+91 8309368958</a></p>
+                <!-- <p><a href="tel:+61494311801">+61494311801</a> <span style="color: rgb(197, 197, 197);">(Whatsapp only)</span></p> -->
+              </div>
+              <div class="contact-phone">
+                <h6>Whatsapp:</h6>
+                <p><i class="bi bi-whatsapp" style="color: white; margin-right: 5px;"></i><a href="https://wa.me/+61494311801">+61494311801 </a></p>
+              </div>
+              <div class="contact-email">
+                <h6>Email:</h6>
+                <p>
+                  <a href="mailto:assignmentlinkers@gmail.com">assignmentlinkers@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <form id="footerContactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fcname"
+                    placeholder="Your Name"
+                    name="fcname"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="fcemail"
+                    placeholder="Your Email"
+                    name="fcemail"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <div class="d-flex">
+                    <select
+                      class="form-control"
+                      id="fccountrycode"
+                      name="countrycode"
+                      style="max-width: 30%; margin-right: 10px;"
+                      required
+                    ><option value="+61">+61 (Australia)</option>
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+91">+91 (India)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+81">+81 (Japan)</option>
+                    <option value="+49">+49 (Germany)</option>
+                    <option value="+33">+33 (France)</option>
+                    <option value="+39">+39 (Italy)</option>
+                    <option value="+86">+86 (China)</option>
+                    <option value="+7">+7 (Russia)</option>
+                    <option value="+55">+55 (Brazil)</option>
+                    <option value="+34">+34 (Spain)</option>
+                    <option value="+52">+52 (Mexico)</option>
+                    <option value="+62">+62 (Indonesia)</option>
+                    <option value="+27">+27 (South Africa)</option>
+                    <option value="+82">+82 (South Korea)</option>
+                    <option value="+90">+90 (Turkey)</option>
+                    <option value="+60">+60 (Malaysia)</option>
+                    <option value="+64">+64 (New Zealand)</option>
+                    <option value="+41">+41 (Switzerland)</option>
+                    <option value="+31">+31 (Netherlands)</option>
+                    <option value="+46">+46 (Sweden)</option>
+                    <option value="+63">+63 (Philippines)</option>
+                    <option value="+966">+966 (Saudi Arabia)</option>
+                    <option value="+47">+47 (Norway)</option>
+                    <option value="+32">+32 (Belgium)</option>
+                    <option value="+94">+94 (Sri Lanka)</option>
+                    <option value="+65">+65 (Singapore)</option>
+                    <option value="+98">+98 (Iran)</option>
+                    <option value="+234">+234 (Nigeria)</option>
+                    </select>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fcmobilenumber"
+                      name="mobilenumber"
+                      placeholder="Mobile Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="2"
+                    placeholder="Message"
+                    required
+                    id="fcmessage"
+                  ></textarea>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div
+                    id="statusMessage"
+                    style="margin: 5px; background-color: rgb(255, 255, 255); border-radius: 2px;"
+                  ></div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 footer-globalpresence">
+          <header class="section-header">
+            <h4>Global Presence</h4>
+          </header>
+          <div class="container">
+            <img
+              src="/assets/img/worldmap.png"
+              alt="our locations in world"
+              style="width: 250px; height: 400px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="paymentsecure-adv">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="" role="">
+            <span style="color: rgb(16, 224, 109); font-size: 18px"
+              >100% Secure Payment</span
+            >
+            <span
+              class="paymentmethods"><img
+                src="/assets/img/paymentcardsimage.png"
+                alt="paymentmethods image"
+            /></span>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row"></div>
+    </div>
+  </section>
+
+  <section id="footer-copyright">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Assignment Linkers</strong>. All Rights
+        Reserved <br />
+      </div>
+    </div>
+</div>
+  </section>
+    <!-- End Header -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Remove flash messages after 5 seconds
+      setTimeout(function () {
+        var flashMessages = document.querySelectorAll(".flash-message");
+        flashMessages.forEach(function (flashMessage) {
+          flashMessage.classList.add("hidden");
+          // Remove the element from DOM after transition completes
+          flashMessage.addEventListener("transitionend", function () {
+            flashMessage.parentNode.removeChild(flashMessage);
+          });
+        });
+      }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+    <script>
+      (function () {
+        "use strict";
+
+        /**
+         * Easy selector helper function
+         */
+        const select = (el, all = false) => {
+          el = el.trim();
+          if (all) {
+            return [...document.querySelectorAll(el)];
+          } else {
+            return document.querySelector(el);
+          }
+        };
+
+        /**
+         * Easy event listener function
+         */
+        const on = (type, el, listener, all = false) => {
+          let selectEl = select(el, all);
+          if (selectEl) {
+            if (all) {
+              selectEl.forEach((e) => e.addEventListener(type, listener));
+            } else {
+              selectEl.addEventListener(type, listener);
+            }
+          }
+        };
+
+        /**
+         * Easy on scroll event listener
+         */
+        const onscroll = (el, listener) => {
+          el.addEventListener("scroll", listener);
+        };
+
+        /**
+         * Mobile nav toggle
+         */
+        on("click", ".mobile-nav-toggle", function (e) {
+          select("#navbar").classList.toggle("navbar-mobile");
+          this.classList.toggle("bi-list");
+          this.classList.toggle("bi-x");
+        });
+
+        /**
+         * Mobile nav dropdowns activate
+         */
+        on(
+          "click",
+          ".navbar .dropdown > a",
+          function (e) {
+            if (select("#navbar").classList.contains("navbar-mobile")) {
+              e.preventDefault();
+              this.nextElementSibling.classList.toggle("dropdown-active");
+            }
+          },
+          true
+        );
+      })();
+    </script>
+  </body>
+</html>

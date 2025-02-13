@@ -1,0 +1,216 @@
+#completed  .a-GV-w-hdr{
+    overflow: auto !important;
+    white-space: nowrap;
+    padding-top: 10px; /* Remove extra padding to align content with scrollbar */
+}
+
+
+.js-stickyTableHeader.is-stuck {
+    padding-bottom: 10px !important;
+}
+
+.js-stickyTableHeader.is-stuck>table:after
+{
+    position:fixed !important;
+} 
+
+.a-GV-headerLabel{
+    color:#006ED0;
+}
+
+.a-GV-table td {
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    color: black;
+    font-size: 14px;
+    
+}
+
+
+.a-GV-table .a-GV-cell, th.a-GV-header 
+{    
+    border-color: lightgray !important;    
+    border: 1px solid gray !important; ;
+    border-collapse: separate !important;
+ }
+th.a-GV-header {
+    background-color: lightgoldenrodyellow; ;
+}
+
+
+.a-GV-selHeader{
+display: none;
+}
+
+.a-GV-w-frozen{
+    width: 0px !important;;
+    display: none !important;
+    z-index: -1;
+}
+.a-GV-table {
+     border-collapse: separate;
+     border-spacing: 0; 
+    border-style: hidden;
+    table-layout: fixed;
+}
+
+
+.a-GV-headerLabel{
+    color:#006ED0;
+}
+
+.a-GV-table td {
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    
+}
+.t-body{
+    padding-top:10px !important;
+}
+.t-Region-body {
+    border-color:rgb(187, 150, 150)!important;   
+    color: black;
+
+}
+
+.t-Region, .t-Region--scrollBody, .t-Form-itemWrapper{
+    color: black;
+    border: solid 0.5px gray;
+    font-size:18px;
+    
+}
+
+/* Custom styling for apex.message.alert */
+.ui-dialog .ui-dialog-titlebar {
+    background: #007BFF; /* Background color for the title bar */
+    color: white; /* Title text color */
+}
+
+.ui-dialog .ui-dialog-content {
+    font-family: Poppins, sans-serif; /* Font style for the content */
+    
+    color: red; /* Text color for the content */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding */
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.t-Report-colHead  {    background-color: lightgoldenrodyellow;  }
+.t-Report-cell {    font-size: 13px;}
+
+.t-Report-cell, .t-Report-colHead {
+    border: 1px solid #080000;
+}
+.t-Report-report tr:last-child .t-Report-cell {
+    border-bottom: 1px solid #080000;
+}
+.t-Report-report tr .t-Report-cell:last-child, .t-Report-report tr .t-Report-colHead:last-child {
+    border-right: 1px solid #080000;
+
+}
+.a-IRR-header {
+    --a-gv-header-cell-border-color: #e6e6e6;
+    background-color: lightgoldenrodyellow;
+    border-top: 1px solid #e6e6e6;
+    color: rgba(0,0,0,.95);
+}
+
+.a-IRR-header{
+       border: 1px solid #080000; 
+}
+.a-IRR-table tr td {
+    background-color: #fff;
+    color: #262626;
+    border: 1px solid #080000;
+    font-size: 13px;
+}
+.t-fht-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid;
+}
+
+
+ $("#save_btn_prd").attr("disabled", true);  
+
+
+
+var htmldb_delete_message='"DELETE_CONFIRM_MSG"';
+function showError(pData, pItem) {
+    apex.item(pItem).setFocus();
+    apex.message.clearErrors();
+    apex.message.showErrors([{
+            type: "error",
+            location: "inline",
+            pageItem: pItem,
+            message: pData,
+            unsafe: false
+        },
+        {
+            type: "error",
+            location: "inline",
+            message: "An error has occurred.",
+            unsafe: false
+        }
+    ]);
+}
+
+.a-GV-cell:not(.is-readonly):not(:empty) {
+  background-color: #ffeb5b61 !important;
+}
+
+.a-GV-cell:not(.is-readonly):is(:empty) {
+  background-color:#ffeb5b61 !important;
+  border-color: #0076df;
+
+}
+
+
+.apex_disabled {
+
+      opacity: 100%;
+      font-size: 1.2em;
+}
+ .a-IG-contentContainer{
+     border: solid 0.5px #0076df;
+    font-size: 1.2em;
+}
+.a-GV-w-hdr{
+  border-bottom: solid 0.5px #0076df;
+}
+.a-GV-footer, .a-GV-header, .a-GV-headerGroup, .a-GV-table .a-GV-cell, .a-IG-gridView .a-GV-footer, .a-Toolbar-group {
+    border-color: #0076df;
+}
+
+.t-Region, .t-Region--scrollBody, .t-Form-itemWrapper{
+    color: #262626;
+    border: solid 0.5px gray;
+
+    
+}
+.t-Region{
+    color: #262626;
+    border: solid 0.5px gray;
+    font-size: 1.2em;
+    
+}
+/* Custom styling for apex.message.alert */
+.ui-dialog .ui-dialog-titlebar {
+    background: #007BFF; /* Background color for the title bar */
+    color: white; /* Title text color */
+}
+
+.ui-dialog .ui-dialog-content {
+    font-family: Poppins, sans-serif; /* Font style for the content */
+    
+    color: red; /* Text color for the content */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding */
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Details</title>
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard-layout.css" />
+
+    <style>
+      .form-heading {
+        color: rgb(241, 148, 8);
+      }
+      input[type="file"] {
+        display: none;
+      }
+      .custom-file-upload {
+        border: none;
+        padding: 10px;
+        margin: 10px 0px;
+      }
+      .custom-file-upload:hover {
+        border: none;
+        padding: 10px;
+        background-color: rgba(208, 210, 211, 0.479);
+        border-radius: 10px;
+      }
+      .file-info {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 1px black;
+      }
+      .card-body {
+        position: relative;
+      }
+      .alert {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 350px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 bg-light">
+          <!-- ======= Header ======= -->
+          <nav class="navbar navbar-expand-md navbar-light">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item">
+        <img src="/assets/img/assignment-linkers-logo.png" alt="Logo" width="130px" />
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">
+          <div class="icon-link">
+            <i class="bi bi-view-list"></i>
+            Dashboard
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard/academicdetails">
+          <div class="icon-link">
+            <i class="bi bi-book"></i>
+            Academic details
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard/orderassignment">
+          <div class="icon-link">
+            <i class="bi bi-cart"></i>
+            Order Assignment
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">
+          <div class="icon-link">
+            <i class="bi bi-cash"></i>
+            Payment
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard/raiseticket">
+          <div class="icon-link">
+            <i class="bi bi-ticket"></i>
+            Raise a Ticket
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/changepassword">
+          <div class="icon-link">
+            <i class="bi bi-fingerprint"></i>
+            Change Password
+          </div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/logout">
+          <div class="icon-link">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+          <!-- End Header -->
+        </div>
+        <div class="col-12 col-sm-12 col-md-10 mt-2">
+          <main class="user-dashboard-academic-details-content userdashboard">
+            <div class="card shadow p-3 mb-5 bg-success rounded bg-light">
+              <div class="card-body">
+                <div class="alert-success" role="alert"></div>
+                <div class="alert-danger" role="alert"></div>
+                <form id="order-form" action="/dashboard/orderassignment/submit" method="POST" enctype="multipart/form-data">
+                  <h6 class="text-center form-heading">Order Assignment</h6>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group mt-3">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required />
+                      </div>
+                      <div class="form-group mt-2">
+                        <label for="university">University</label>
+                        <input type="text" class="form-control" id="university" name="university" required />
+                      </div>
+                      <div class="form-group mt-2">
+                        <label for="deadline">Deadline</label>
+                        <input type="datetime-local" class="form-control" id="deadline" name="deadline" required />
+                        <span id="daysLeft"></span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group mt-3">
+                        <label for="wordCount">Words Count</label>
+                        <input type="text" class="form-control" id="wordCount" name="wordCount" />
+                      </div>
+                      <div class="form-group mt-2">
+                        <label for="pages">No. of pages(1 page=250 words)</label>
+                        <input type="number" class="form-control" id="pages" name="pages" min="1" readonly />
+                      </div>
+                      <div class="form-group mt-2">
+                        <label for="description">Enter Your Assignment Description</label>
+                        <textarea id="description" class="form-control" name="description" rows="2" required></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div>
+                      <label for="file-upload" class="custom-file-upload">📁 Attach File(s)</label>
+                      <input id="file-upload" type="file" name="files" onchange="handleFileUpload(this)" multiple />
+                    </div>
+
+                    <div id="file-list"></div>
+
+                    <div class="form-group mt-2">
+                      <label>
+                        <input type="checkbox" position="left" name="accept_terms" required />
+                        I accept the T&C and other policies of the website and agree to receive updates.
+                      </label>
+                    </div>
+                  </div>
+                  <div id="spinner" style="display: flex; justify-content: center"></div>
+                  <div class="form-group mt-2 text-center">
+                    <button type="submit " class="bg-warning text-white border-0">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/assets/js/order-assignment.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </body>
+</html>

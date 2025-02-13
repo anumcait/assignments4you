@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/dashboard-layout.css" />
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 bg-light"><nav class="navbar navbar-expand-md navbar-light">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item">
+        <img src="/assets/img/assignment-linkers-logo.png" alt="Logo" width="130px" />
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">
+          <div class="icon-link">
+            <i class="bi bi-view-list"></i>
+            Dashboard
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard/academicdetails">
+          <div class="icon-link">
+            <i class="bi bi-book"></i>
+            Academic details
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard/orderassignment">
+          <div class="icon-link">
+            <i class="bi bi-cart"></i>
+            Order Assignment
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">
+          <div class="icon-link">
+            <i class="bi bi-cash"></i>
+            Payment
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard/raiseticket">
+          <div class="icon-link">
+            <i class="bi bi-ticket"></i>
+            Raise a Ticket
+          </div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/changepassword">
+          <div class="icon-link">
+            <i class="bi bi-fingerprint"></i>
+            Change Password
+          </div>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/logout">
+          <div class="icon-link">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+        <div class="col-12 col-sm-12 col-md-10 mt-2">
+          <main class="user-dashboard-content userdashboard">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <div class="card shadow">
+                  <div class="card-body" >
+                    <div class="d-flex align-items-center">
+                      <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 30px; height: 30px">
+                        <i class="bi bi-person"></i>
+                        <!-- User icon -->
+                      </div>
+                      <div class="ms-3">
+                        <% if(username) { %>
+                        <h5 class="card-title fw-bold text-info"><%= username %></h5>
+                        <p class="card-text text-muted">
+                          <strong>Welcome Back..!</strong>
+                        </p>
+                      </div>
+                      <% } %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 30px; height: 30px">
+                        <i class="bi bi-truck"></i>
+                        <!-- User icon -->
+                      </div>
+                      <div class="ms-3">
+                        <h5 class="card-title fw-bold text-info"><%= pendingOrders %></h5>
+                        <p class="card-text text-muted">
+                          <strong>pending Orders</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 30px; height: 30px">
+                        <i class="bi bi-rocket-takeoff"></i>
+                        <!-- User icon -->
+                      </div>
+                      <div class="ms-3">
+                        <h5 class="card-title fw-bold text-info"><%= ongoingOrders %></h5>
+                        <p class="card-text text-muted">
+                          <strong>In progress Orders</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 30px; height: 30px">
+                        <i class="bi bi-truck"></i>
+                        <!-- User icon -->
+                      </div>
+                      <div class="ms-3">
+                        <h5 class="card-title fw-bold text-info"><%= deliverOrders %></h5>
+                        <p class="card-text text-muted">
+                          <strong>Delivered Orders</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-12 col-sm-12 col-md-12">
+                <div class="user-dashboard-order-history">
+                  <div class="card shadow p-2 mb-5 rounded overflow-auto">
+                    <div class="card-body">
+                      <h5 class="my-3 text-center fw-bold text-info">My Recent Orders</h5>
+                      
+                      <div class="row mb-3">
+                        <div class="table-responsive mt-2">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>OrderID</th>
+                                <th>Subject</th>
+                                <th>Deadline (IST)</th>
+                                <th>WordsCount</th>
+                                <th>OrderStatus</th>
+                              </tr>
+                            </thead>
+
+                            <tbody id="orderTableBody">
+                                <% orders.forEach(order => {%>
+                               
+                              <tr>
+                                <td><%= order.orderId %></td>
+                                <td><%= order.subject %></td>
+                                <td><%= order.deadline.toLocaleString() %></td>
+                                <td><%= order.wordCount %></td>
+                                <td><%= order.orderStatus %></td>
+                                <td>
+                                  <button class="pay-btn" data-order-id="<%= order.orderId %>" data-amount="<%= order.amount %>">Pay Now</button>
+                                </td>
+                                <!-- <td>
+                                  <a href="/userdashboard/orderslist/showdetails/ALO-805023">
+                                    <button class="btn btn-outline-primary" type="button">
+                                      <i class="bi bi-eye"></i>
+                                    </button>
+                                  </a>
+                                </td> -->
+                                
+                              </tr>
+                              <% }) %>
+                               
+                            </tbody>
+                          </table>
+                          <div class="text-center">
+                            <a href="/dashboard/orderassignment" style="text-decoration: none" class="text-muted">
+                              <span><i class="bi bi-plus-circle"></i></span> Order Assignment<span></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main1.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </body>
+</html>
