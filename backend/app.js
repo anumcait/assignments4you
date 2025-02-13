@@ -54,7 +54,7 @@ app.use('/',authRoutes);
 
 app.get('/',(req,res)=>{
     res.status(200);
-    res.send("Welcome to AssignmentsAdda")
+    res.send("Welcome to Assignments4you")
 })
 
 
