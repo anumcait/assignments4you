@@ -2,8 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-//const multer = require('multer');
-//const upload = multer({ dest: 'uploads/' });
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
 const Razorpay = require('razorpay');
 
 
